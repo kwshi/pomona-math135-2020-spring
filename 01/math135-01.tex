@@ -14,12 +14,12 @@
     \begin{solution}
     \end{solution}
 
-  \item \(\dfrac{2+3i}{1+i}\)
+  \item \(\frac{2+3i}{1+i}\)
 
     \begin{solution}
     \end{solution}
 
-  \item \(\left(\dfrac{(2+i)^2}{4-3i}\right)^2\)
+  \item \(\left(\frac{(2+i)^2}{4-3i}\right)^2\)
 
     \begin{solution}
     \end{solution}
@@ -59,12 +59,12 @@
 
 \end{exercise}
 
-\begin{exercise}\label{ExerciseInscribed}
+\begin{exercise}
 	Let \(a,b,c\) be distinct complex numbers.  Prove that \(a,b,c\) are
   the vertices of an equilateral triangle if and only
   if\footnote{Hint: Consider the relationship between \(b-a\),
     \(c-b\), and \(a-c\).}
-	\begin{equation}\label{eq-TriangleEquation}
+	\begin{equation}
 		a^2 + b^2 + c^2 = ab+bc+ca.
 	\end{equation}
 
@@ -74,9 +74,9 @@
 \end{exercise}
 
 \begin{exercise}
-	Let \(\DD = \{ z\in \CC : \abs z < 1\}\) denote the open unit disk,
-  \(\DD^- = \{ z \in \CC: \abs z \leq 1\}\) the closed unit disk, and
-  \(\TT = \{ z \in \CC : \abs z =1\}\) the unit circle.\footnote{The
+	Let \(\DD = \{z\in \CC : \abs z < 1\}\) denote the open unit disk,
+  \(\DD^- = \{z \in \CC: \abs z \le 1\}\) the closed unit disk, and
+  \(\TT = \{z \in \CC : \abs z = 1\}\) the unit circle.\footnote{The
     symbol \(\TT\) is frequently used to denote the unit circle.  The
     letter \(\TT\) stands for \emph{torus} (i.e., the surface of a
     donut).  Why?  Topologically speaking, the Cartesian product
@@ -116,15 +116,15 @@
     requested identity is of fundamental importance in the study of
     \emph{Fourier series}.  The function on the right-hand side of
     \eqref{eq-DKF} is called the \emph{Dirichlet kernel}.}
-  \[
+  \begin{equation}
 		1 + 2 \sum_{n=1}^N \cos nx
     = \frac{\sin \sbr*{\prn*{N + \frac 1 2} x}}{\sin \frac{x}{2}}
     \label{eq-DKF}
-  \]
-	for \(x \in \RR\) and \(N = 1,2,\ldots\) by using Euler's formula
-  and the finite geometric series formula\footnote{This formula is
-    used in calculus to sum the geometric series.  Indeed, if
-    \(\abs z < 1\), then \(z^n \to 0\) so that
+  \end{equation}
+	for \(x \in \RR\) and \(N = 1,2,\dots\) by using Euler's formula and
+  the finite geometric series formula\footnote{This formula is used in
+    calculus to sum the geometric series.  Indeed, if \(\abs z < 1\),
+    then \(z^n \to 0\) so that
     \(\sum_{n=0}^{\infty} z^n = \lim_{N\to\infty} \sum_{n=0}^{N-1} z^n
     = \lim_{N\to\infty}\frac{1 - z^N}{1-z} = \frac{1}{1-z}\).}
 	\begin{equation*}
