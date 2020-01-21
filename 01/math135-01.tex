@@ -1,0 +1,136 @@
+\documentclass{../math135}
+
+\title{Homework 1}
+\author{}
+\date{Tuesday 1/28}
+
+\begin{document}
+\begin{exercise}
+	Evaluate the following expressions.  Write your answer in the form
+  \(a + bi\) where \(a\) and \(b\) are real.
+	\begin{enumerate}
+  \item \((1+i)(2+3i)\)
+
+    \begin{solution}
+    \end{solution}
+
+  \item \(\dfrac{2+3i}{1+i}\)
+
+    \begin{solution}
+    \end{solution}
+
+  \item \(\left(\dfrac{(2+i)^2}{4-3i}\right)^2\)
+
+    \begin{solution}
+    \end{solution}
+
+  \item \(e^{i\alpha} \overline{e^{i\beta}}\), where \(\alpha\) and
+    \(\beta\) are real.
+
+    \begin{solution}
+    \end{solution}
+
+  \item \(\overline{(1-i)\overline{(2+2i)}}\)
+
+    \begin{solution}
+    \end{solution}
+
+  \item \(\abs{2-i}^3\)
+
+    \begin{solution}
+    \end{solution}
+
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+	Write \(z = \sqrt{3}-i\) in polar form \(z = re^{i\theta}\).
+
+  \begin{solution}
+  \end{solution}
+
+\end{exercise}
+
+\begin{exercise}
+	What are the third roots of \(z=8i?\)
+
+  \begin{solution}
+  \end{solution}
+
+\end{exercise}
+
+\begin{exercise}\label{ExerciseInscribed}
+	Let \(a,b,c\) be distinct complex numbers.  Prove that \(a,b,c\) are
+  the vertices of an equilateral triangle if and only
+  if\footnote{Hint: Consider the relationship between \(b-a\),
+    \(c-b\), and \(a-c\).}
+	\begin{equation}\label{eq-TriangleEquation}
+		a^2 + b^2 + c^2 = ab+bc+ca.
+	\end{equation}
+
+  \begin{solution}
+  \end{solution}
+
+\end{exercise}
+
+\begin{exercise}
+	Let \(\DD = \{ z\in \CC : \abs z < 1\}\) denote the open unit disk,
+  \(\DD^- = \{ z \in \CC: \abs z \leq 1\}\) the closed unit disk, and
+  \(\TT = \{ z \in \CC : \abs z =1\}\) the unit circle.\footnote{The
+    symbol \(\TT\) is frequently used to denote the unit circle.  The
+    letter \(\TT\) stands for \emph{torus} (i.e., the surface of a
+    donut).  Why?  Topologically speaking, the Cartesian product
+    \(\TT^2 = \TT \times \TT\) of two tori a torus.  The unit circle
+    \(\TT\) is a ``one-dimensional torus,'' \(\TT^2\) is the usual
+    ``two-dimensional torus,'' etc.}  Fix \(a \in \DD\), and consider
+  the function
+	\begin{equation}\label{eq-Blaschke}
+		f(z) = \frac{a-z}{1 - \overline{a} z}.
+	\end{equation}
+	\begin{enumerate}
+	\item Show that \(\abs*{f(z)} <1\) for \(z \in \DD\).
+
+    \begin{solution}
+    \end{solution}
+
+	\item Show that \(\abs*{f(z)} = 1\) for \(z \in \TT\).\footnote{Hint:
+      \(\abs*{f(z)}^2 = f(z) \overline{f(z)}\).}
+
+    \begin{solution}
+    \end{solution}
+
+	\item Restricting the domain of \(f\) to \(\DD\), show that the
+    \(f \colon \DD\to\DD\) is a \emph{bijection} (i.e., one-to-one and onto).
+    Find a formula for the inverse function
+    \(f^{-1} \colon \DD\to\DD\).
+
+    \begin{solution}
+    \end{solution}
+
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+	Prove that\footnote{L'H\^opital's Rule shows that the identity
+    remains valid even if \(x\) is a multiple of \(2\pi\).  The
+    requested identity is of fundamental importance in the study of
+    \emph{Fourier series}.  The function on the right-hand side of
+    \eqref{eq-DKF} is called the \emph{Dirichlet kernel}.}
+	\begin{equation}
+		1 + 2 \sum_{n=1}^N \cos nx = \frac{ \sin[ (N + \frac{1}{2})x] }{ \sin  \tfrac{x}{2}}\label{eq-DKF}
+	\end{equation}
+	for \(x \in \RR\) and \(N = 1,2,\ldots\) by using Euler's formula
+  and the finite geometric series formula\footnote{This formula is
+    used in calculus to sum the geometric series.  Indeed, if
+    \(\abs z < 1\), then \(z^n \to 0\) so that
+    \(\sum_{n=0}^{\infty} z^n = \lim_{N\to\infty} \sum_{n=0}^{N-1} z^n
+    = \lim_{N\to\infty}\frac{1 - z^N}{1-z} = \frac{1}{1-z}\).}
+	\begin{equation*}
+		1+ z + \cdots + z^{n-1} = \frac{1-z^n}{1-z}.
+	\end{equation*}
+
+  \begin{solution}
+  \end{solution}
+
+\end{exercise}
+\end{document}
