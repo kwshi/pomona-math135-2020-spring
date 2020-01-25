@@ -48,16 +48,6 @@
 \RequirePackage{centernot}
 \RequirePackage{cancel}
 
-\RequirePackage{tikz}
-\RequirePackage{pgfplots}
-
-\usetikzlibrary{arrows.meta}
-\usetikzlibrary{calc}
-\usetikzlibrary{positioning}
-
-\pgfplotsset{compat=1.16}
-\usepgfplotslibrary{patchplots}
-
 \RequirePackage{parskip}
 
 \RequirePackage{hyperref}
@@ -103,6 +93,15 @@
 }
 \setlist[problems, 2]{label=\alph*.}
 
+\makeatletter
+\def\imp#1{\expandafter\@imp\csname c@#1\endcsname}
+\def\@imp#1{\ifcase#1\or \(\implies\)\or\(\impliedby\)\fi}
+\makeatother
+\AddEnumerateCounter{\imp}{\@imp}{\(\implies\)}
+
+\newlist{ifflist}{enumerate}{1}
+\setlist[ifflist]{label=\imp*}
+
 %
 \newcommand{\QQ}{\mathbb Q}
 \newcommand{\DD}{\mathbb D}
@@ -118,7 +117,11 @@
 \newcommand{\drv}[3][]{\frac{\dif^{#1} #2}{\dif #3^{#1}}}
 \newcommand{\pdrv}[3][]{\frac{\pdif^{#1} #2}{\pdif #3^{#1}}}
 
+\let\Re\relax
+\let\Im\relax
 \DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Re}{Re}
+\DeclareMathOperator{\Im}{Im}
 
 \DeclarePairedDelimiter{\cbr}{\{}{\}}
 \DeclarePairedDelimiter{\set}{\{}{\}}
@@ -130,3 +133,41 @@
 \DeclarePairedDelimiter{\prn}{(}{)}
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+% diagram presets
+\RequirePackage{tikz}
+\RequirePackage{pgfplots}
+
+\pgfplotsset{compat=1.16}
+\usepgfplotslibrary{patchplots}
+
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{angles}
+\usetikzlibrary{quotes}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+
+\tikzset{
+  angle eccentricity=3/2,
+  vector/.style={
+    thick,
+    arrows=-{Stealth[length=1em/2]},
+  },
+  dot/.style={
+    circle,
+    fill,
+    inner sep=0pt,
+    minimum size=1em/4,
+  },
+  annotation/.style={
+    opacity=1/2,
+  },
+  guide/.style={
+    annotation,
+    densely dotted,
+  },
+  measure/.style={
+    annotation,
+    arrows=<->,
+  },
+}
