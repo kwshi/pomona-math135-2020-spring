@@ -90,10 +90,7 @@
 
 \RequirePackage[inline]{enumitem}
 \newlist{problems}{enumerate}{3}
-\setlist[problems, 1]{
-  label=\arabic*.,
-  leftmargin=0em,
-}
+\setlist[problems, 1]{label=\arabic*.}
 \setlist[problems, 2]{label=\alph*.}
 
 \makeatletter
