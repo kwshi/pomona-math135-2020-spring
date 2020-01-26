@@ -52,6 +52,9 @@
 
 \RequirePackage{hyperref}
 
+\RequirePackage{caption}
+\captionsetup{width=\linewidth}
+
 \RequirePackage{mdframed}
 
 \declaretheoremstyle[
