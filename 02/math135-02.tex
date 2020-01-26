@@ -1,0 +1,116 @@
+\documentclass{../math135}
+
+\title{Homework 2}
+\author{}
+\date{Tuesday 2/4}
+
+\begin{document}
+
+\begin{exercise}
+	Let \(\abs a = \abs b = \abs c \ne 0\) and \(a + b + c = 0\).  Prove
+  that \(a, b, c\) form the vertices of an equilateral triangle
+  inscribed in a circle centered at the origin.
+\end{exercise}
+
+\begin{exercise}
+	Prove that \(\lim_{z\to \infty} p(z) = \infty\) holds for any
+  nonconstant polynomial.\footnote{Hint: Suppose that
+    \(p(z) = a_n z^n + a_{n-1} z^{n-1} + \cdots + a_1 z + a_0\) with
+    \(a_n \ne 0\).  Prove that for any \(M >0\) there exists \(R>0\)
+    such that \(\abs{p(z)} > M\) whenever \(\abs z > R\).  Use the
+    \emph{reverse triangle inequality}
+    \(\abs*{\abs a - \abs b} \le \abs{a-b}\) to show that the
+    \(a_n z^n\) term dominates.}
+\end{exercise}
+
+\begin{exercise}
+	Show that the functions \(u(x, y) = e^x \cos y\) and
+  \(v(x, y) = e^x \sin y\) are harmonic conjugates on \(\CC\).  In
+  particular, this shows that the function
+  \(\exp(z) = e^x\cos y + i e^x \sin y\) (where \(z=x+iy\)) defines an
+  analytic function on \(\CC\).
+\end{exercise}
+
+\begin{exercise}
+	Let \(\Omega\) be a region in \(\CC\).  Using the Cauchy--Riemann
+  equations, identify all analytic \(f \colon \Omega\to\CC\) which satisfy
+  the following (consider each problem separately).
+	\begin{enumerate}
+  \item \(f(\Omega) \subseteq \RR\),
+
+  \item \(\arg f\) is constant on \(\Omega\),
+
+  \item \(\overline{f}\) is analytic on \(\Omega\),
+
+  \item \(\abs f\) is constant on \(\Omega\)
+
+  \item \(f(x,y) = u(x) + i v(y)\), in which \(u,v\) are real-valued.
+
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+	The \emph{Poisson kernel} is the family of functions \(P_r(t)\) defined by
+	\begin{equation*}
+		P_r(t) = \frac{1 - r^2}{1 - 2r \cos t + r^2},
+	\end{equation*}
+	where \(0 \le r < 1\) and \(-\pi \le t \le \pi\) (see Figure
+  \ref{FigurePoisson}).  \footnote{The Poisson kernel arises in a
+    number of important contexts (e.g., solving the steady-state heat
+    equation on \(\DD\)).}
+	  \begin{figure}[h]
+	    \begin{center}
+	      %\includegraphics[width=3in]{Graphs/Poisson}
+        \tikzset{
+          declare function={
+            poisson(\r,\t)=(1-\r*\r)/(1-2*\r*cos(deg(\t))+\r*\r);
+          },
+          poisson/.style={
+            samples=257,
+            domain=-pi:pi,
+          },
+        }
+        \begin{tikzpicture}
+        	\begin{axis}[
+            width=4in,
+            height=5in/2,
+            axis y line=center,
+            axis x line=bottom,
+            ylabel=\(P_r(t)\),
+            ylabel style=above,
+            xlabel=\(t\),
+            xlabel style=right,
+            ymax=10,
+            xtick={-pi,0,pi},
+            xticklabels={\(-\pi\),\(0\),\(\pi\)},
+            ]
+            \addplot [poisson, draw=blue] {poisson(.2,x)};
+            \addplot [poisson, draw=purple] {poisson(.5,x)};
+            \addplot [poisson, draw=olive] {poisson(.8,x)};
+          \end{axis}
+        \end{tikzpicture}
+	      \caption{\footnotesize The Poisson kernel \(P_r(t)\) for
+          \(r = 0.2, \,0.5, \,0.8\).  As \(r\to 1^-\), the graphs
+          spike sharply at \(t = 0\) while tending rapidly to zero for
+          \(t\) away from \(0\).  Intuitively, the functions
+          \(P_r(t)\) ``approximate a Dirac \(\delta\)-function at
+          \(t = 0\)'' as \(r \to 1^-\).  This notion can be made more
+          precise using measure theory and functional analysis (Math
+          137--8).}
+	      \label{FigurePoisson}
+	    \end{center}
+	  \end{figure}
+
+	\begin{enumerate}
+  \item Show that \(P_r(t) = \Re f(re^{it})\) where
+    \(f(z) = \frac{1+z}{1-z}\).
+
+  \item Show that \(P_r(t)\) is harmonic in \(\DD\).\footnote{Hint:
+      \(P_r(t)\) is given as a function of \(r,t\), rather than
+      \(x,y\).  Verifying directly that \(P_r(t)\) satisfies the
+      Laplace equation is hard since it requires working with the
+      Laplace equation in polar coordinates.  Find an easier way.}
+	\end{enumerate}
+\end{exercise}
+
+\end{document}
