@@ -115,6 +115,7 @@
 %
 \newcommand{\QQ}{\mathbb Q}
 \newcommand{\DD}{\mathbb D}
+\newcommand{\UU}{\mathbb U}
 \newcommand{\RR}{\mathbb R}
 \newcommand{\NN}{\mathbb N}
 \newcommand{\FF}{\mathbb F}
