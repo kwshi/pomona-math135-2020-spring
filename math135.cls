@@ -102,6 +102,16 @@
 \newlist{ifflist}{enumerate}{1}
 \setlist[ifflist]{label=\imp*}
 
+\newcommand{\music}[1]{%
+  \ifcase\number\value{#1}%
+  \or\eighthnote%
+  \or\twonotes%
+  \or\quarternote%
+  \or\halfnote%
+  \or\fullnote%
+  \fi%
+}
+
 %
 \newcommand{\QQ}{\mathbb Q}
 \newcommand{\DD}{\mathbb D}
@@ -143,6 +153,7 @@
 
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{angles}
+\usetikzlibrary{3d}
 \usetikzlibrary{quotes}
 \usetikzlibrary{calc}
 \usetikzlibrary{positioning}
