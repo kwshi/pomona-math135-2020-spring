@@ -96,11 +96,19 @@
 \makeatletter
 \def\imp#1{\expandafter\@imp\csname c@#1\endcsname}
 \def\@imp#1{\ifcase#1\or \(\implies\)\or\(\impliedby\)\fi}
+
+\def\sset#1{\expandafter\@sset\csname c@#1\endcsname}
+\def\@sset#1{\ifcase#1\or \(\subseteq\)\or\(\supseteq\)\fi}
+
 \makeatother
 \AddEnumerateCounter{\imp}{\@imp}{\(\implies\)}
+\AddEnumerateCounter{\sset}{\@sset}{\(\subseteq\)}
 
 \newlist{ifflist}{enumerate}{1}
 \setlist[ifflist]{label=\imp*}
+
+\newlist{seteqlist}{enumerate}{1}
+\setlist[seteqlist]{label=\sset*}
 
 \newcommand{\music}[1]{%
   \ifcase\number\value{#1}%
