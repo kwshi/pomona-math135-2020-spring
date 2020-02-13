@@ -1,0 +1,138 @@
+\documentclass{../math135}
+
+\title{Homework 4}
+\author{}
+\date{Tuesday 2/18}
+
+\begin{document}
+
+\begin{exercise}
+	Does there exist an analytic function
+  \(f \colon \DD \to \DD \setminus \set 0\) which is surjective and
+  such that the preimage \(f^{-1}(\set w)\) of each point
+  \(w \in \DD \setminus \set 0\) is infinite?
+
+  \begin{solution}
+
+  \end{solution}
+\end{exercise}
+
+\begin{exercise}
+	Let \(\Omega\) be a region in \(\CC\) and let
+  \(f_n \colon \Omega\to\CC\) be a sequence of functions that
+  converges pointwise on \(\Omega\) to a function
+  \(f \colon \Omega\to\CC\).  Consider the following definitions.
+	\begin{enumerate}
+  \item \(f_n\) converges to \(f\) \emph{locally uniformly} on
+    \(\Omega\) if for each \(z \in \Omega\) there exists
+    \(\delta > 0\) such that \(f_n\) converges uniformly to \(f\) on
+    the open disk \(B(z, \delta) \subseteq \Omega\).
+    \label{itm:local-uniform}
+  \item \(f_n\) converges to \(f\) \emph{uniformly on compact sets} in
+    \(\Omega\) if for each compact subset \(K \subset \Omega\), the
+    sequence \(f_n\) converges uniformly to \(f\) on \(K\).
+    \label{itm:uniform-compact}
+	\end{enumerate}
+	Prove that these two concepts are equivalent.\footnote{These
+    concepts are important mainly because one rarely obtains uniform
+    convergence on \(\Omega\) (bad things may happen on or near
+    \(\partial\Omega\)).  However, one often obtains locally uniform
+    convergence.  For instance, a power series with radius of
+    convergence \(R > 0\) typically does not converge uniformly on
+    \(\abs*{z-z_0} < R\), but it does converge locally uniformly on
+    \(\abs*{z-z_0} < R\).
+
+		Local uniform convergence is enough for most purposes in complex
+    function theory.  Many upcoming theorems depend upon integrating
+    over closed curves in \(\Omega\).  Since closed curves are
+    \emph{compact}, locally uniform convergence on \(\Omega\) gives
+    (via the equivalence \ref{itm:local-uniform} \(\iff\)
+    \ref{itm:uniform-compact}) uniform convergence on each closed
+    curve.  This is enough to justify certain operations, like
+    swapping limits with contour integrals.}
+
+  \begin{solution}
+
+  \end{solution}
+
+\end{exercise}
+
+\begin{exercise}
+	Let \(f(z) = \frac{z}{1-z-z^2}\).
+	\begin{problems}
+  \item Assume that \(f(z) = \sum_{n=0}^{\infty} a_n z^n\) on
+    \(\abs z < R\) for some \(R > 0\).  Prove that \(a_n = f_n\) where
+    \(f_n\) is the \(n\)th \emph{Fibonacci number}
+    \(0,1,1,2,3,5,8,13,\ldots\).\footnote{\(f_0 = 0\), \(f_1 = 1\),
+      and \(f_n = f_{n-1}+ f_{n-2}\) for \(n \geq 2\).}
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Perform a partial fraction expansion and use the geometric
+    series summation formula to derive\footnote{Hint: Avoid
+      manipulating expressions involving \(\sqrt 5\)s if you can.  For
+      instance, no \(\sqrt 5\)s appear in my solution until the
+      next-to-last line.  You can assume that the coefficients in a
+      power series expansion are unique. } \emph{Binet's Formula}
+    \begin{equation}
+      f_n = \frac{1}{\sqrt 5} \prn*{
+        \prn*{\frac{1 + \sqrt 5}{2}}^n
+        - \prn*{\frac{1 - \sqrt 5}{2}}^n
+      }
+      \label{eq:binet}
+    \end{equation}
+    for the \(n\)th Fibonacci number.  Note that \eqref{eq:binet} is
+    \emph{explicit}, in the sense that \(f_n\) can be computed
+    directly, without any knowledge of previous Fibonacci numbers.
+    \comment{Since \(\frac{1-\sqrt 5}{2} \approx -0.618\), the second
+      term in \eqref{eq:binet} tends to zero exponentially fast.
+      Therefore \(\frac{1}{\sqrt 5} \prn*{\frac{1 + \sqrt 5}{2}}^n\)
+      is an excellent approximation to the \(n\)th Fibonacci number.
+      It yields the remarkable approximations \(55.00363612\) and
+      \(6765.000030\) for \(f_{10} = 55\) and \(f_{20} = 6765\).}
+
+    \begin{solution}
+
+    \end{solution}
+
+	\end{problems}
+\end{exercise}
+
+\begin{exercise}
+	Certain power series can be \emph{analytically continued} beyond
+  their disk of convergence.  For instance, the geometric series
+  \(\sum_{n=0}^\infty z^n\) converges on the open unit disk \(\DD\).
+  However, it is only a ``small part'' of the analytic function
+  \(\frac{1}{1-z}\), which is defined on all of
+  \(\CC \setminus \set 1\).  Consider the function
+  \[
+		f(z) = \sum_{n=0}^\infty z^{2^n}.
+  \]
+
+	\begin{problems}
+  \item Show that the series defining \(f(z)\) has radius of
+    convergence \(R = 1\).
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Show that \(\lim_{z\to\zeta} \abs*{f(z)}\) diverges if
+    \(\zeta\) is a \(2^m\)th root of unity.  Since the set of
+    \(2^m\)th roots of unity is dense in the unit circle \(\TT\),
+    \(f\) cannot be analytically continued across any arc of \(\TT\).
+    In other words, the unit circle is the \emph{natural boundary} of
+    \(f\).\footnote{Hint: Use
+      \(f(z) = \prn*{z + z^2 + z^4 + \cdots + z^{2^{m-1}}} +f
+      \prn*{z^{2^m}}\) and \(\lim_{r \to 1^-} f(r) = \infty\).}
+
+    \begin{solution}
+
+    \end{solution}
+
+	\end{problems}
+\end{exercise}
+
+\end{document}

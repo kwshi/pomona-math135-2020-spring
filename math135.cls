@@ -6,10 +6,12 @@
 
 \RequirePackage{geometry}
 \geometry{
-  left=1in,
-  right=1in,
+  left=1.25in,
+  right=1.25in,
   top=.25in,
   bottom=.5in,
+  marginparwidth=1in,
+  marginparsep=.125in,
   includeheadfoot,
 }
 
@@ -57,6 +59,9 @@
 
 \RequirePackage{mdframed}
 
+\RequirePackage{marginnote}
+\newcommand{\comment}[1]{\marginpar{\color{gray}\scriptsize #1}}
+
 \declaretheoremstyle[
   spaceabove=\parskip,
 ]{exercise}
@@ -90,8 +95,9 @@
 
 \RequirePackage[inline]{enumitem}
 \newlist{problems}{enumerate}{3}
-\setlist[problems, 1]{label=\arabic*.}
-\setlist[problems, 2]{label=\alph*.}
+\setlist[enumerate, 1]{label=(\alph*)}
+\setlist[problems, 1]{label=(\alph*)}
+\setlist[problems, 2]{label=(\roman*)}
 
 \makeatletter
 \def\imp#1{\expandafter\@imp\csname c@#1\endcsname}
