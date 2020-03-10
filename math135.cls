@@ -173,6 +173,10 @@
 \usetikzlibrary{quotes}
 \usetikzlibrary{calc}
 \usetikzlibrary{positioning}
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.markings}
 
 \tikzset{
   angle eccentricity=3/2,
