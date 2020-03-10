@@ -1,0 +1,111 @@
+\documentclass{../math135}
+
+\title{Homework 7}
+\author{}
+\date{Tuesday 3/10}
+
+\tikzset{
+  ax/.style={annotation, x=1in+2em, y=1in+2em},
+  contour/.style={
+    x=1in,
+    y=1in,
+    postaction=decorate,
+    decoration={
+      markings,
+      mark=between positions 1in/8 and 1 step 1in/4 with {\arrow{>}},
+    },
+  },
+  every node/.style={text height=3em/4},
+  dot/.append style={text height=0em},
+}
+
+\begin{document}
+
+\begin{exercise}
+	Suppose that \(p(z)\) is a polynomial of degree \(n \geq 2\) with
+  all of its zeros in \(\abs z < r\).  Evaluate
+  \[
+		\int_{\abs z=r} \frac{\dif z}{p(z)}.
+  \]
+
+  \begin{solution}
+
+  \end{solution}
+\end{exercise}
+
+
+\begin{exercise}\label{exerciseRectangle}
+	Evaluate the improper integral
+  \[
+		\int_0^\infty e^{-x^2} \cos 2bx \dif x
+  \]
+	for \(b \ge 0\) by integrating \(f(z) = e^{-z^2}\) over the contour
+  \(\gamma\) depicted in Figure \ref{fig:rect}, then letting
+  \(R \to \infty\).
+	\begin{figure}[h]
+    \begin{center}
+      \begin{tikzpicture}
+        \draw [<->, ax] (-1,0) -- (1,0);
+        \draw [->, ax] (0,0) -- (0,1);
+        \draw [contour]
+        (-1,0) coordinate [dot] node [below] {\(-R\)}
+        -- coordinate [dot] node [below] {\(0\)}
+        node [near end, below] {\(\gamma_1\)}
+        (1,0) coordinate [dot] node [below] {\(R\)}
+        -- node [right] {\(\gamma_2\)}
+        (1,1) coordinate [dot] node [above right] {\(R+ib\)}
+        -- node [near start, above] {\(\gamma_3\)}
+        (-1,1) coordinate [dot] node [above left] {\(-R+ib\)}
+        -- node [left] {\(\gamma_4\)} cycle;
+      \end{tikzpicture}
+    \end{center}
+		\caption{The contour for exercise \ref{exerciseRectangle}.}
+		\label{fig:rect}
+	\end{figure}
+	Be sure to justify your reasoning.
+
+  \begin{solution}
+
+  \end{solution}
+\end{exercise}
+
+\begin{exercise}\label{exerciseSemiCircle}
+	Evaluate the improper integral
+  \[
+		\int_0^{\infty} \frac{1- \cos x}{x^2}\,dx
+  \]
+	by integrating the function \(f(z) = \frac{1-e^{iz}}{z^2}\) over the
+  contour \(\gamma\) depicted in Figure \ref{fig:semicircle},
+	\begin{figure}[h]
+    \begin{center}
+      \begin{tikzpicture}
+        \tikzset{declare function={eps=1/6;}}
+        \draw [<->, ax] (-1,0) -- (1,0);
+        \draw [->, ax] (0,0) -- (0,1);
+        \coordinate [dot] () at (0,0);
+        \node [below] at (0,0) {\(0\)};
+        \draw [contour]
+        (eps,0) coordinate [dot] node [below] {\(\epsilon\)}
+        -- (1,0) coordinate [dot] node [below] {\(R\)}
+        arc [radius=1, start angle=0, end angle=180]
+        node [near start, above right] {\(\gamma_R\)}
+        node [midway, above right] {\(iR\)}
+        coordinate [dot] node [below] {\(-R\)}
+        -- (-eps,0) coordinate [dot] node [below] {\(-\epsilon\)}
+        arc [radius=eps, start angle=180, end angle=0]
+        node [near end, above right] {\(\gamma_\epsilon\)}
+        -- cycle;
+      \end{tikzpicture}
+    \end{center}
+		\caption{The contour for exercise \ref{exerciseSemiCircle}.}
+		\label{fig:semicircle}
+	\end{figure}
+	then letting \(R \to \infty\) and \(\epsilon \to 0\). Be sure to
+  justify your reasoning.
+
+  \begin{solution}
+
+  \end{solution}
+\end{exercise}
+
+\end{document}
