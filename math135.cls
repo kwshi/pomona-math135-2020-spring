@@ -56,6 +56,7 @@
 
 \RequirePackage{caption}
 \captionsetup{width=\linewidth}
+\RequirePackage{float}
 
 \RequirePackage{mdframed}
 
