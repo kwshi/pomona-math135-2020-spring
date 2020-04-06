@@ -1,0 +1,98 @@
+\documentclass{../math135}
+
+\title{Homework 9}
+\author{}
+\date{Tuesday 4/7}
+
+\begin{document}
+
+\begin{exercise}
+	Suppose that \(f\) is entire and \(\abs* {\frac {f(z)} {z^n}} \le
+  M\) for \(\abs z > R\).  Prove that \(f\) is a polynomial of degree
+  \(\leq n\).
+
+  \begin{solution}
+
+  \end{solution}
+\end{exercise}
+
+\begin{exercise}
+	Suppose \(f \colon \DD \to \CC\) is analytic and
+  \[
+		\lim_{\substack{z \to 1 \\ z \in \DD}}
+    \frac{\abs{f(z)}^2}{\abs{z-1}} = 1.
+  \]
+	Prove that \(f\) cannot be analytically continued to a neighborhood
+  of \(z_0 = 1\).
+
+  \begin{solution}
+
+  \end{solution}
+\end{exercise}
+
+\begin{exercise}
+  \comment{A \emph{fixed point} of \(f\) is a point \(\xi\) such that
+    \(f(\xi) = \xi\).}  Suppose that \(f\) is analytic on
+  \(\CC \setminus \set 0\), \(f(1) = 2\), and \(f(2) = 1\).  Is it
+  possible for \(f\) to have infinitely many fixed points in the
+  annular region \(1 < \abs z < 2\)?
+
+  \begin{solution}
+
+  \end{solution}
+\end{exercise}
+
+\begin{exercise}
+	Let \(p(z)\) be a nonconstant polynomial and let \(\gamma\) be a
+  simple closed curve in \(\CC\) that does not pass through any zero
+  of \(p(z)\).  Give a general rule for evaluating
+  \[
+		\frac{1}{2 \pi i} \int_\gamma
+    \frac{p'(\zeta)}{p(\zeta)} \dif \zeta.
+  \]
+
+  \begin{solution}
+
+  \end{solution}
+\end{exercise}
+
+\begin{exercise}
+	Do there exist \(f, g\), analytic in a neighborhood of \(z = 0\),
+  such that
+  \begin{problems}
+  \item \(f \prn*{\frac 1 n} = f \prn*{-\frac 1 n} = \frac{1}{n^2}\)
+    for \(n = 1, 2, \dots\)?
+  \item \(g \prn*{\frac 1 n} = g \prn*{-\frac 1 n} = \frac{1}{n^3}\)
+    for \(n = 1, 2, \dots\)?
+  \end{problems}
+	Justify your answer.
+
+  \begin{solution}
+
+  \end{solution}
+\end{exercise}
+
+
+\begin{exercise}
+	If \(f \colon \DD \to \DD\) is analytic, prove that
+  \[
+		\abs*{\frac{f(z) - f(w)}{1 - \overline{f(w)} f(z)}} \le
+    \abs*{\frac{z-w}{1 - \bar w z}}
+  \]
+	hold for all \(z, w \in \DD\).\footnote{It turns out that
+    \(\rho(z, w) = \abs*{\frac{z-w}{1 - \bar w z}}\) defines a metric
+    on \(\DD\), called the \emph{pseudohyperbolic metric}, which can
+    be used to construct the \emph{hyperbolic} (of \emph{Poincar\'e})
+    metric \(\psi(z, w) = \log \frac{1 + \rho(z,w)}{1 - \rho(z,w)}\)
+    on \(\DD\).  When equipped with the Poincar\'e metric, the unit
+    disk \(\DD\) becomes a model of the \emph{hyperbolic plane}.  In
+    other words, one can concretely work on hyperbolic geometry by
+    working on \(\DD\).  This problem is essentially asking you to
+    prove that an analytic function \(f \colon \DD \to \DD\) is a
+    \emph{contraction} with respect to the pseudohyperbolic (and hence
+    the Poincar\'e) metric.}
+\end{exercise}
+
+
+
+\end{document}
