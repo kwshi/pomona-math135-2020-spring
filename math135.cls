@@ -148,6 +148,7 @@
 \DeclareMathOperator{\diam}{diam}
 \DeclareMathOperator{\Re}{Re}
 \DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\Res}{Res}
 \newcommand{\tto}{\rightrightarrows}
 
 \DeclarePairedDelimiter{\cbr}{\{}{\}}
