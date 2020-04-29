@@ -1,0 +1,161 @@
+\documentclass {../math135}
+
+\title {Homework 12}
+\author {}
+\date {Tuesday 4/28}
+
+\tikzset {
+  every picture/.style={x=3em/2, y=3em/2},
+  %every picture/.style={x=1cm, y=1cm},
+  pt/.style={circle, fill, inner sep=1pt},
+  path/.style 2 args={
+    decoration={
+      markings,
+      mark=between positions #1*3em/2 and 1 step #2*3em/2 with \arrow >,
+    },
+    postaction=decorate,
+  },
+}
+
+\begin {document}
+
+\begin{exercise}
+	Show that\footnote{Hint: Use the standard ``semi-circle'' contour
+    and the Residue Theorem.}
+  \[
+		\int_{-\infty}^\infty \frac {\cos a x} {x^4+1} \dif x
+    = \frac {\pi e^{- a / \sqrt 2}} {\sqrt 2}
+    \left ( \cos \frac a {\sqrt 2} + \sin \frac a {\sqrt 2} \right ).
+  \]
+	for \(a \in \RR\).
+
+  \begin {solution}
+
+  \end {solution}
+
+\end{exercise}
+
+\begin{exercise}
+	Using Rouch\'e's theorem, find the number of roots that
+  \(f(z) = z^7 - 4z^3 - 11\) has in each of the regions
+  \begin {problems}
+  \item \(\abs z \le 1\),
+
+    \begin {solution}
+
+    \end {solution}
+
+  \item \(1 < \abs z < 2\), and
+
+    \begin {solution}
+
+    \end {solution}
+
+  \item \(\abs z \ge 2\).
+
+    \begin {solution}
+
+    \end {solution}
+
+  \end {problems}
+\end{exercise}
+
+\begin{exercise}
+	Evaluate
+  \[
+    \frac 1 {2 \pi i} \int_\gamma \left (
+      \frac {f'(z)} {f(z)-1} + \frac {f'(z)} {f(z)-2}
+    \right ) \dif z.
+  \]
+	in which \(f\) is an entire function and \(\gamma\) is a simple
+  closed curve in \(\CC\) (traversed once in the counterclockwise
+  direction) whose \emph{image} under \(f\) is depicted below.
+  \begin {center}
+    \begin {tikzpicture}
+      \draw [path={1/2}{2}] (0,0)
+      |- ++(2,-2) |- ++(-3,3) |- ++(9,-2)
+      |- ++(-2,2) |- ++(3,-3) |- (0,2) -- cycle;
+
+      \foreach \i in {1,2} {
+        \coordinate [pt] (\i) at (-5+6*\i,0);
+        \node [below] at (\i) {\(\i\)};
+      }
+    \end {tikzpicture}
+  \end {center}
+
+  \begin {solution}
+
+  \end {solution}
+
+\end{exercise}
+
+\begin{exercise}
+	Let
+  \(\Omega = \{ z \in \CC : \Re z > 0, \, \abs z > 1, \, z \notin [2,
+  \infty) \}\), suppose that \(f \colon \Omega \to \Omega\) is
+  analytic, and \(f(1+i) = f(1-i)\).  Does there exist an analytic
+  function \(g \colon \Omega \to \CC\) such that \(g^3 = f\) on
+  \(\Omega\)?  Justify your answer.
+
+  \begin {solution}
+
+  \end {solution}
+
+\end{exercise}
+
+\begin{exercise}
+	Does there exist a \(R>0\) such that
+	\[
+    \frac 1 {2 \pi i} \int_{\abs z = R}
+    \frac {(\cos z) e^{\sin z}} {e^{\sin z} - 47} \dif z
+  \]
+	is finite and \(\ge 47\) in absolute value?  Justify your answer.
+
+  \begin {solution}
+
+  \end {solution}
+
+\end{exercise}
+
+\begin{exercise}
+	Suppose that \(f \colon \CC \setminus \{z_1, z_2, z_3, z_4\}\) is
+  analytic, \(\gamma\) is the contour depicted below,
+  \begin {center}
+    \begin {tikzpicture}
+      \draw [path={1/4}{2}] (0,0)
+      -| ++(1,5) -| ++(-5/2,-11/2) -| ++(10,3)
+      -| ++(-7/2,-7/2) -| ++(9/2,9/2) -| ++(-5,2) -| ++(7/2,-5/2)
+      -| ++(-21/2,-11/2) -| ++(9/2,4) -| ++(-3,-3/2) -- cycle;
+
+      \coordinate [pt] (1) at (-1/2,4);
+      \coordinate [pt] (4) at (13/2,3/4);
+      \coordinate [pt] (2) at (1 -| 4);
+      \coordinate [pt] (3) at (1 |- 4);
+
+      \foreach \i in {1,...,4} {
+        \node [right] at (\i) {\(z_\i\)};
+      }
+    \end {tikzpicture}
+  \end {center}
+  and
+	\begin{enumerate}
+  \item \(\lim_{z \to z_1} f(z) = 1\),
+  \item
+    \(f(z) = \cdots + \frac 7 {(z-z_2)^2} + \frac 2 {(z-z_2)} + 3 +
+    2(z-z_2) - 5 (z-z_2)^2 + \cdots\) for all \(z\) sufficiently
+    near \(z_2\),
+  \item \(\lim_{z \to z_3} (z-z_3) f(z) = 3\),
+  \item
+    \(\frac 1 {2 \pi i} \int_{\abs {z - z_4} = \delta} f(z) \dif z =
+    4\) for all sufficiently small \(\delta > 0\).
+	\end{enumerate}
+	Using this information, evaluate
+  \(\frac 1 {2 \pi i} \int_\gamma f(z) \dif z\).
+
+  \begin {solution}
+
+  \end {solution}
+
+\end{exercise}
+
+\end {document}
