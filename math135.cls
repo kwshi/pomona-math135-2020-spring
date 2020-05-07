@@ -149,6 +149,7 @@
 \DeclareMathOperator{\Re}{Re}
 \DeclareMathOperator{\Im}{Im}
 \DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Aut}{Aut}
 \newcommand{\tto}{\rightrightarrows}
 
 \DeclarePairedDelimiter{\cbr}{\{}{\}}
